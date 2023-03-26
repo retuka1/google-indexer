@@ -5,8 +5,8 @@ const axios = require('axios');
 const parseString = require('xml2js').parseString;
 
 const sitemapUrl = 'https://www.opportunites-digitales.com/post-sitemap2.xml';
-const googleApiKey = 'AIzaSyAR1tL1swrv4OwNN7qoRvzKjz850eVpXrk';
-const searchEngineId = '27ff8d6b45a044a7b';
+const googleApiKey = '';
+const searchEngineId = '';
 
 const urlsNotIndexed = [];
 

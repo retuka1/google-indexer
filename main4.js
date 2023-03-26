@@ -10,8 +10,8 @@ const urls = [
 
 const urlsNotIndexed = []
 
-const googleApiKey = 'AIzaSyAR1tL1swrv4OwNN7qoRvzKjz850eVpXrk';
-const searchEngineId = '27ff8d6b45a044a7b';
+const googleApiKey = '';
+const searchEngineId = '';
 
 urls.forEach(url => {
     axios.get(`https://www.googleapis.com/customsearch/v1?key=${googleApiKey}&cx=${searchEngineId}&q=${url}`)
