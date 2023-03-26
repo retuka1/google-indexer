@@ -1,3 +1,5 @@
+// Juste avec un tableau d'url, 1 et 3 sont indexées, n°2 pas indexée
+
 const axios = require('axios')
 
 const urls = [

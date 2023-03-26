@@ -1,4 +1,4 @@
-/// STOCK LES URLS NON INDEXEES DANS UN ARRAY, PAS D'API INDEXNG
+/// Sans clé api google indexing, stock les urls non indexées (marche pas)
 
 const axios = require('axios');
 

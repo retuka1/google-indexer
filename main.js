@@ -1,5 +1,4 @@
-
-// CODE QUI MARCHE 
+// fetch et parse sitemap
 
 
 const axios = require('axios');
