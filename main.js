@@ -1,12 +1,13 @@
 // fetch et parse sitemap
 
-
 const axios = require('axios');
 // Import the xml2js package to parse the XML data
 const parseString = require('xml2js').parseString; 
 
 // Replace this URL with the URL of the sitemap you want to fetch
 const sitemapUrl = 'https://www.opportunites-digitales.com/post-sitemap1.xml';
+
+
 
 // Make an HTTP request to fetch the sitemap XML
 axios.get(sitemapUrl)

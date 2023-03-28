@@ -5,8 +5,8 @@ const axios = require('axios');
 const parseString = require('xml2js').parseString;
 
 const sitemapUrl = 'https://www.opportunites-digitales.com/post-sitemap2.xml';
-const googleApiKey = '';
-const searchEngineId = '';
+const googleApiKey = 'AIzaSyAR1tL1swrv4OwNN7qoRvzKjz850eVpXrk';
+const searchEngineId = '27ff8d6b45a044a7b';
 
 const urlsNotIndexed = [];
 
@@ -20,7 +20,7 @@ axios.get(sitemapUrl)
         const urls = result.urlset.url.map(url => url.loc[0]).slice(1, 2);
         console.log(urls);
         urls.forEach(url => {
-          axios.get(`https://www.googleapis.com/customsearch/v1?key=${googleApiKey}&cx=${searchEngineId}&q=${url}`)
+          axios.get(`https://www.googleapis.com/customsearch/v1?key=${googleApiKey}&cx=site:${searchEngineId}&q=${url}`)
             .then(response => {
               if (!response.data.items) {
                 urlsNotIndexed.push(url);

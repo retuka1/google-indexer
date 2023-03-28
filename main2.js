@@ -1,13 +1,13 @@
-// Avec clé api google indexing 
-
 const axios = require('axios');
+
+// avec clé api google indexing
 
 const parseString = require('xml2js').parseString;
 
 const sitemapUrl = 'https://www.opportunites-digitales.com/post-sitemap1.xml';
-const googleApiKey = '';
-const searchEngineId = '';
-const indexingApiKey = ''; 
+const googleApiKey = 'AIzaSyAR1tL1swrv4OwNN7qoRvzKjz850eVpXrk';
+const searchEngineId = '27ff8d6b45a044a7b';
+const indexingApiKey = 'cc38d8aae3c52eb12039e66ad1e13259a5ec6bf5';
 
 const urlsToIndex = [];
 
@@ -21,7 +21,7 @@ axios.get(sitemapUrl)
         urls.forEach(url => {
           axios.get(`https://www.googleapis.com/customsearch/v1?key=${googleApiKey}&cx=${searchEngineId}&q=${url}`)
             .then(response => {
-              if (!response.data.items) {
+              if (response.data.items) {
                 urlsToIndex.push(url);
                 console.log(urlsToIndex)
               }
